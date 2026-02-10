@@ -1,0 +1,51 @@
+/* ========================================================================
+   THEME CONFIGURATION & CUSTOM UTILITIES
+   ========================================================================
+   Design tokens used across the app. Tailwind v4 generates utility classes
+   from these (e.g., --color-primary -> bg-primary, text-primary).
+*/
+
+@theme {
+  /* Color palette - dark theme */
+  --color-primary: #030014;      /* Main background */
+  --color-light-100: #cecefb;    /* Accent, buttons */
+  --color-light-200: #a8b5db;    /* Placeholder text */
+  --color-gray-100: #9ca4ab;     /* Muted text */
+  --color-dark-100: #0f0d23;     /* Cards, modals */
+
+  /* Typography */
+  --font-dm-sans: "DM Sans", sans-serif;
+  --font-bebas: "Bebas Neue", sans-serif;
+
+  /* Breakpoints */
+  --breakpoint-xs: 480px;
+
+  /* Assets */
+  --background-image-hero-pattern: url("/BackGround.png");
+
+  /* Animations */
+  --animate-banner-fade: bannerFadeIn 1s ease-in-out;
+}
+
+/* --- Custom Utilities --- */
+
+/* Gradient text effect for headings (e.g., "Movies" in hero) */
+@utility text-gradient {
+  @apply bg-linear-to-r from-[#D6C7FF] to-[#AB8BFF] bg-clip-text text-transparent;
+}
+
+/* Large stencil-style numbers for trending section (e.g., "1", "2", "3") */
+@utility fancy-text {
+  -webkit-text-stroke: 5px rgba(206, 206, 251, 0.5);
+  font-size: 190px;
+  font-family: var(--font-bebas);
+}
+
+/* Hides scrollbar while keeping scroll functionality */
+@utility hide-scrollbar {
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+  &::-webkit-scrollbar {    /* Chrome/Safari */
+    display: none;
+  }
+}

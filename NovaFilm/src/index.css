@@ -1,0 +1,19 @@
+/* ========================================================================
+   MAIN STYLESHEET ENTRY
+   ========================================================================
+   Entry point for all styles. Load order matters:
+   1. Fonts - Load before theme so CSS variables can reference them
+   2. Tailwind - Initializes the framework
+   3. Theme - Design tokens and custom utilities
+   4. Base - Global resets and defaults
+   5. Components - UI-specific styles
+*/
+
+/* Google Fonts: DM Sans (body text), Bebas Neue (headings) */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import "tailwindcss";
+
+@import "./styles/theme.css";
+@import "./styles/base.css";
+@import "./styles/components.css";
