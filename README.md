@@ -1,6 +1,6 @@
 **MovieVerse Discovery & Watchlist App**
 
-Live Demo: https://movieapp165.vercel.app/
+Live Demo: https://nova-film-ten.vercel.app/
 
 A modern, high-performance movie discovery application that allows users to explore global cinema, track community trends, and manage a personal watchlist.
 This project focuses on Software Design Patterns, Performance Optimization, and UX Accessibility.
